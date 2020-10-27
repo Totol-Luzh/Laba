@@ -25,7 +25,7 @@ int main() {
 			for (k = 0; k < 4; k++)
 				si = si + ms[i][k];
 			printf("Сумма %d-ой строки = %d \n", i + 1, si);
-			if (min >= si) {
+			if (min > si) {
 				min = si;
 				str = i;
 			}
