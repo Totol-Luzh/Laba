@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int main() {
 	setlocale(LC_ALL, "Rus");
@@ -18,7 +19,7 @@ int main() {
 		printf("\n");
 	}
 	printf("\n");
-	min = 1000;
+	min = INT_MAX;
 	str = 1;
 	for (i = 0; i < 4; i++) {
 			si = 0;
