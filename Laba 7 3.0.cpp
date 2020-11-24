@@ -23,6 +23,11 @@ int main() {
 	printf("Введите размер строки \n");
 	while (!scanf_s("%d", &n)) fflush(stdin);
 	str = (char*)calloc(n, sizeof(char));
+	if (!str)
+	{
+		printf("Место под массив не выделено");
+		return 1;
+	}
 	printf("Введите предложение\n");
 	rewind(stdin);
 	gets_s(str, n);
