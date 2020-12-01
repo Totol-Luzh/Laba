@@ -48,7 +48,6 @@ int main() {
         rewind(stdin);
         gets_s(str[i], m);
     }
-    system("CLS");
     printf("Заполните строки изображениями чисел через пробел\n");
     for (i = 0; i < n; i++) {
         printf("Строка %d:\n %s", i, str[i]);
