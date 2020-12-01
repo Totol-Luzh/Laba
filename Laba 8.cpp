@@ -4,11 +4,9 @@
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    //char* char_numbers[4] = { "96","34","23","198" };
     char** str;
     char str2[15];
     int** numbers;
-    //int   int_numbers[4];
     int n, m, i, j, x, k, l, maxl;
     printf("Введите количество и длину строк: ");
     x = scanf_s("%d %d", &n, &m);
