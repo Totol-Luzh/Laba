@@ -28,7 +28,6 @@ int main() {
             return 1;
         }
     } // Созданние массива строк завершено
-    l = m / 2;
     numbers = (int**)calloc(n, sizeof(int));
     if (!numbers)
         return 1;
@@ -41,16 +40,12 @@ int main() {
             return 1;
         }
     } // Создание массива целых чисел завершено
-    printf("Введите предложение\n");
+    printf("Заполните строки изображениями чисел через пробел\n");
     for (i = 0; i < n; i++) {
+        printf("Строка %d: ", i);
         rewind(stdin);
         gets_s(str[i], m);
     }
-    printf("Заполните строки изображениями чисел через пробел\n");
-    for (i = 0; i < n; i++) {
-        printf("Строка %d:\n %s", i, str[i]);
-        printf("\n");
-    } // Заполнение строк завершено
     maxl = 0;
     for (i = 0; i < n; i++) { // Преобразование символов чисел в числа 
         k = 0;
@@ -67,7 +62,8 @@ int main() {
             numbers[i][l] = atoi(str2);
             l++;
         }
-        if (maxl < l) maxl = l;
+        if (maxl < l) 
+            maxl = l;
     } 
     for (i = 0; i < n; i++) // Сортирует числовые значения в строках
         for (j = 0; j < maxl; j++)
@@ -85,7 +81,6 @@ int main() {
             printf("%d ", numbers[i][j]); 
     }
     free(str);
-    free(str2);
     free(numbers);
     return 0;
 }
